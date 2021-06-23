@@ -170,6 +170,31 @@ const internQuestions = [
     }
 ]
 
+
+
+// need to add:
+// - list choices for employee?
+{
+    type: "confirm",
+    name: "confirmAdd",
+    message: "Would you like to add an employee?",
+    default: true;
+}
+when: ({ confirmAdd }) => confirmAdd
+{
+    type: "checkbox",
+    name: "employeeOption",
+    message: "Which type of employee would you like to add?",
+    choices: ["Manager", "Engineer", "Intern"]
+}
+// - email validation?
+const emailValidator = require("email-validator");
+emailValidator.validate("test@email.com");
+// - writefile 
+
+
+
+
 //init function
 function init() {
     inquirer
